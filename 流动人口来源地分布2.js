@@ -12,7 +12,7 @@ require(
     ],
     function (ec) {
         // 基于准备好的dom，初始化echarts图表
-        var myChart5 = ec.init(document.getElementById('op5')); 
+        var myChart8 = ec.init(document.getElementById('op8')); 
 
         function createRandomItemStyle() {
             return {
@@ -26,9 +26,9 @@ require(
             };
         }
 
-        option5 = {
+        option8 = {
             title: {
-                text: '流动人口民族构成',//标题文本内容
+                text: '流动人口来源地分布',//标题文本内容
                 textStyle: {//设置标题的文本样式
                     color: '#ffffff'
                 },
@@ -50,67 +50,80 @@ require(
                 },
                 data: [
                     {
-                        name: "汉族",
-                        value: 30,
+                        name: "安徽",
+                        value: 90,
                         itemStyle: createRandomItemStyle(),
                     },
                     {
-                        name: "蒙古族",
-                        value: 30,
+                        name: "亳州",
+                        value: 90,
                         itemStyle: createRandomItemStyle(),
-            
                     },
                     {
-                        name: "彝族",
+                        name: "滁州",
+                        value: 76,
+                        itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "六安",
+                        value: 55,
+                        itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "淮北",
+                        value: 40,
+                    itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "扬州",
+                        value: 20,
+                        itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "徐州",
+                        value: 20,
+                        itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "枣庄",
+                        value: 20,
+                        itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "宿州",
+                        value: 40,
+                    itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "菏泽",
+                        value: 15,
+                        itemStyle: createRandomItemStyle(),
+                    },
+                    {
+                        name: "蚌埠",
                         value: 28,
                         itemStyle: createRandomItemStyle(),
                     },
                     {
-                        name: "回族",
-                        value: 25,
-                        itemStyle: createRandomItemStyle(),
+                        name: "芜湖",
+                        value: 48,
+                    itemStyle: createRandomItemStyle(),
                     },
                     {
-                        name: "维吾尔族",
-                        value: 20,
-                        itemStyle: createRandomItemStyle(),
-                    },
-                    {
-                        name: "土家族",
-                        value: 20,
-                        itemStyle: createRandomItemStyle(),
-                    },
-                    {
-                        name: "藏族",
+                        name: "无锡",
                         value: 18,
-                        itemStyle: createRandomItemStyle(),
+                    itemStyle: createRandomItemStyle(),
                     },
                     {
-                        name: "壮族",
-                        value: 16,
-                        itemStyle: createRandomItemStyle(),
-                    },
-                    {
-                        name: "满族",
-                        value: 15,
-                        itemStyle: createRandomItemStyle(),
-                    },
-                    
-                    {
-                        name: "苗族",
-                        value: 15,
-                        itemStyle: createRandomItemStyle(),
-                    },
-                    {
-                        name: "白旗族",
-                        value: 13,
-                        itemStyle: createRandomItemStyle(),
+                        name: "连云港",
+                        value: 20,
+                    itemStyle: createRandomItemStyle(),
                     },
                 ]
             }]
         };
 
         // 为echarts对象加载数据 
-        myChart5.setOption(option5); 
+        myChart8.setOption(option8); 
     }
 );
