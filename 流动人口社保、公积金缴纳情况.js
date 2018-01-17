@@ -1,11 +1,8 @@
 
-        var myChart1 = echarts.init(document.getElementById('op1'));
+        var myChart1 = echarts.init(document.getElementById('op1'),'dark');
         var option1 = {
             title: {
                 text: '流动人口社保、公积金缴纳情况',
-                textStyle: {//设置标题的文本样式
-                    color: '#ffffff'
-                },
             },
             tooltip: {
                 trigger: 'axis'
@@ -15,7 +12,6 @@
                 right: '6%',
                 top: '10%',
             },
-            backgroundColor: 'rgba(30, 51, 94,0.8)',
             grid: {
                 show: true,
                 left: '1%',
@@ -44,23 +40,12 @@
                     type: 'line',
                     data: [2, 6, 3, 12, 5, 25, 30],
                     symbol: 'rect',
-                    itemStyle: {//线条颜色
-                        normal: {
-                            color: 'rgb(255, 255, 22)',
-                        }
-                    },
-
                 },
                 {
                     name: '公积金',
                     type: 'line',
                     data: [6, 3, 12, 24, 10, 30, 35],
                     symbol: 'rect',//折线小圆点
-                    itemStyle: {//线条颜色
-                        normal: {
-                            color: 'rgb(82, 136, 200)',
-                        }
-                    },
                 }
             ]
         };

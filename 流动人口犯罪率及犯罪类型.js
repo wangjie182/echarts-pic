@@ -1,14 +1,10 @@
-var myChart4 = echarts.init(document.getElementById('op4'));
+var myChart4 = echarts.init(document.getElementById('op4'),'dark');
 
 var option4 = {
     // color: ['#23cbe5',],
     title: {
-        text: '流动人口民族宗教',//标题文本内容
-        textStyle: {//设置标题的文本样式
-            color: '#ffffff'
-        },
+        text: '流动人口犯罪率和犯罪类型',//标题文本内容
     },
-    backgroundColor: 'rgba(30, 51, 94,0.8)',
     legend: {
         itemWidth: 25,
         right: 10,
@@ -58,14 +54,6 @@ var option4 = {
                 }
                 return newParamsName
             },
-            textStyle: {
-                color: '#6861a6' //文字颜色
-            }
-        },
-        axisLine: {
-            lineStyle: {
-                color: '#ffffff',
-            }
         },
         axisTick: {
             alignWithLabel: true
