@@ -1,6 +1,6 @@
 
-var myChart1 = echarts.init(document.getElementById('op1'), 'dark');
-var option1 = {
+var myChart2 = echarts.init(document.getElementById('op2'), 'dark');
+var option2 = {
     title: {
         text: '流动人口社保、公积金缴纳情况',
     },
@@ -47,4 +47,4 @@ var option1 = {
         }
     ]
 };
-myChart1.setOption(option1);
+myChart2.setOption(option2);
