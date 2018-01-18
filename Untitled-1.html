@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html >
+<body>
+<div id="bmap"  style="height:350px;"></div>
+</body>
+</html>
+<style>
+    .anchorBL{display:none}
+</style>
+<!-- Javascript Libraries -->
+
+<!--BAIDU  map  api-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5FnbbnXIKC6gqbAOXf2U4t1B08SS5Zwu"></script>
+<!-- jQuery -->
+<script src="jquery-3.2.1.min.js"></script>
+<script src="echarts.min.js"></script>
+<script>
+    require.config({
+        packages: [
+            {
+                name: 'echarts',
+                location: '/static/echarts/src',
+                main: 'echarts'
+            },
+            {
+                name: 'zrender',
+                //location: 'http://ecomfe.github.io/zrender/src',
+                location: '/static/zrender-2.1.0/src',
+                main: 'zrender'
+            },
+            {
+                name: 'BMap',
+                location: '/static/echarts/extension/BMap/src',
+                main: 'main'
+            }
+        ]
+    });
+    require(
+            [
+                'echarts',
+                'BMap',
+                'echarts/chart/map'
+            ],
+            function (echarts, BMapExtension) {
+                // 初始化地图
+                var BMapExt = new BMapExtension($('#bmap')[0], BMap, echarts, {
+                    enableMapClick: false
+                });
+                var map = BMapExt.getMap();
+                var container = BMapExt.getEchartsContainer();
+
+                var startPoint = {
+                    x: 104.114129,
+                    y: 37.550339
+                };
+
+                var point = new BMap.Point(startPoint.x, startPoint.y);
+                map.centerAndZoom(point, 5);
+                map.enableScrollWheelZoom(true);
+                // 地图自定义样式
+                map.setMapStyle({
+                    styleJson: [
+                        {
+                            "featureType": "water",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#044161"
+                            }
+                        },
+                        {
+                            "featureType": "land",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#004981"
+                            }
+                        },
+                        {
+                            "featureType": "boundary",
+                            "elementType": "geometry",
+                            "stylers": {
+                                "color": "#064f85"
+                            }
+                        },
+                        {
+                            "featureType": "railway",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "highway",
+                            "elementType": "geometry",
+                            "stylers": {
+                                "color": "#004981"
+                            }
+                        },
+                        {
+                            "featureType": "highway",
+                            "elementType": "geometry.fill",
+                            "stylers": {
+                                "color": "#005b96",
+                                "lightness": 1
+                            }
+                        },
+                        {
+                            "featureType": "highway",
+                            "elementType": "labels",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "arterial",
+                            "elementType": "geometry",
+                            "stylers": {
+                                "color": "#004981"
+                            }
+                        },
+                        {
+                            "featureType": "arterial",
+                            "elementType": "geometry.fill",
+                            "stylers": {
+                                "color": "#00508b"
+                            }
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "green",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#056197",
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "subway",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "manmade",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "local",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "arterial",
+                            "elementType": "labels",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "boundary",
+                            "elementType": "geometry.fill",
+                            "stylers": {
+                                "color": "#029fd4"
+                            }
+                        },
+                        {
+                            "featureType": "building",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#1a5787"
+                            }
+                        },
+                        {
+                            "featureType": "label",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        }
+                    ]
+                });
+
+                option={
+                    color: [
+                        'gold',
+                        'aqua',
+                        'lime'
+                    ],
+                   
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: function(v){
+                            var v1=v[1];
+                            var v2=v[2];
+                            return v1+v2+"次";
+                        }
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        x: 'left',
+                        data: [
+                            '标注'
+                        ],
+                        selectedMode: 'multiple'
+                    },
+//                    toolbox: {
+//                        show: true,
+//                        orient: 'vertical',
+//                        x: 'right',
+//                        y: 'center',
+//                        feature: {
+//                            mark: {
+//                                show: true
+//                            },
+//                            dataView: {
+//                                show: true,
+//                                readOnly: false
+//                            },
+//                            restore: {
+//                                show: true
+//                            },
+//                            saveAsImage: {
+//                                show: true
+//                            }
+//                        }
+//                    },
+                    dataRange: {
+                        min: 0,
+                        max: 100,
+                        y: '60%',
+                        calculable: true,
+                        color: [
+                            '#ff3333',
+                            'orange',
+                            'yellow',
+                            'lime',
+                            'aqua'
+                        ]
+                    },
+                    series: [
+                        {
+                            name: '标注',
+                            type: 'map',
+                            mapType: 'none',
+                            data: [
+
+                            ],
+                            geoCoord: {
+                                "辽宁省沈阳": [
+                                    123.431991,
+                                    41.806243
+                                ],
+                                "辽宁省锦州": [
+                                    121.126983,
+                                    41.094940
+                                ],
+                                "浙江省杭州": [
+                                    120.154388,
+                                    30.274002
+                                ]
+                            },
+                            markPoint: {
+                                symbol: 'emptyCircle',
+                                symbolSize: function(v){
+                                    return 10+v/10
+                                },
+                                effect: {
+                                    show: true,
+                                    shadowBlur: 0
+                                },
+                                itemStyle: {
+                                    normal: {
+                                        label: {
+                                            show: false
+                                        }
+                                    }
+                                },
+                                data: [
+                                    {
+                                        name: '辽宁省沈阳',
+                                        value: 100
+                                    },
+                                    {
+                                        name: '辽宁省锦州',
+                                        value: 40
+                                    },
+                                    {
+                                        name: '浙江省杭州',
+                                        value: 10
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                };
+                var myChart = BMapExt.initECharts(container);
+                window.onresize = myChart.onresize;
+                BMapExt.setOption(option);
+            }
+    );
+</script>
