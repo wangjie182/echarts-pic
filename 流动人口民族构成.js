@@ -12,7 +12,7 @@ require(
     ],
     function (ec) {
         // 基于准备好的dom，初始化echarts图表
-        var myChart5 = ec.init(document.getElementById('op5'), 'dark');
+        var myChart5 = ec.init(document.getElementById('op5'));
 
         // function createRandomItemStyle() {
         //     return {
@@ -29,18 +29,21 @@ require(
         option5 = {
             title: {
                 text: '流动人口民族构成',//标题文本内容
-                color: 'white',
+                textStyle: {
+                    color: 'white'
+                },
             },
             tooltip: {
                 show: true
             },
             backgroundColor: '#333',
             series: [{
-                name: 'Google Trends',
                 type: 'wordCloud',
                 size: ['80%', '80%'],
                 textRotation: [0, 0, 0, 0],
                 textPadding: 5,
+                bottom: '3%',
+                right: '2%',
                 autoSize: {
                     enable: true,
                     minSize: 16

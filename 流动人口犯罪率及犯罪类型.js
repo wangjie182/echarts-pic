@@ -12,10 +12,9 @@ var option4 = {
     },
     grid: {
         left: '10%',
-        bottom: '5%',
-        top: '10',
-        height: '80%',
-        width: '90%'
+        top: '10%',
+        height: '75%',
+        width: '85%',
     },
     xAxis: {
         type: 'category',
@@ -79,7 +78,7 @@ var option4 = {
                 ['非法经营', 12]
             ],
             symbolSize: function (data) {
-                return Math.sqrt(data[1]) / 0.23;
+                return Math.sqrt(data[1]) / 0.2;
             },
 
         }
