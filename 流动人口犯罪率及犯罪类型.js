@@ -6,15 +6,15 @@ var option4 = {
         text: '流动人口犯罪率和犯罪类型',//标题文本内容
     },
     legend: {
-        itemWidth: 25,
+        itemWidth: 20,
         right: 10,
         data: ['一案双查']
     },
     grid: {
-        left: '10%',
-        top: '10%',
-        height: '75%',
-        width: '85%',
+        left: '7%',
+        top: '12%',
+        height: '66%',
+        width: '90%',
     },
     xAxis: {
         type: 'category',
@@ -29,11 +29,11 @@ var option4 = {
             '非法经营'],
         axisLabel: {                      //设置换行
             show: true,
-            interval: 0,
+            // interval: 1,
             formatter: function (params) {
                 var newParamsName = "";
                 var paramsNameNumber = params.length;
-                var provideNumber = 3;  //一行显示几个字
+                var provideNumber = 4;  //一行显示几个字
                 var rowNumber = Math.ceil(paramsNameNumber / provideNumber);
                 if (paramsNameNumber > provideNumber) {
                     for (var p = 0; p < rowNumber; p++) {
@@ -78,7 +78,7 @@ var option4 = {
                 ['非法经营', 12]
             ],
             symbolSize: function (data) {
-                return Math.sqrt(data[1]) / 0.2;
+                return Math.sqrt(data[1]) / 0.22;
             },
 
         }

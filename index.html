@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>ECharts练习</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <!--引入百度地图的jssdk，这里需要使用你在百度地图开发者平台申请的 ak-->
     <script src="http://api.map.baidu.com/api?v=2.0&ak=5FnbbnXIKC6gqbAOXf2U4t1B08SS5Zwu"></script>
     <!-- 引入 ECharts -->
@@ -18,35 +20,72 @@
 </head>
 
 <body>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="title">
+        <span>
+            阜阳市流动人口
+        </span>
+        <div id="title-pic">
+            <i class="fa fa-street-view fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-male fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-blind fa-2x" aria-hidden="true"></i>
+        </div>
+    </div>
 
-    <!-- 流动人口社保、公积金缴纳情况 -->
-    <div id="op2" style="width: 400px;height:300px;"></div>
 
-    <!-- 流动人口职业收入情况 -->
-    <div id="op3" style="width: 400px;height:250px;"></div>
 
-    <!-- 流动人口犯罪率及犯罪类型 -->
-    <div id="op4" style="width: 400px;height:300px;"></div>
 
-    <!-- 流动人口民族构成 -->
-    <div id="op5" style="width: 400px;height:300px;"></div>
+    <div id="main">
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 
-    <!-- 流动人口民族宗教 -->
-    <div id="op6" style="width: 400px;height:300px;"></div>
+        <!-- 2011-2016阜阳市流动人口 -->
+        <div id="op1">
+            <span>2011-2016阜阳市流动人口</span>
+            <div id="op1-main">
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>3</span>
+                <span>7</span>
+                <span>8</span>
+                人
+            </div>
+            <div id="op1-bottom">
+                迁入率为
+                <span>3.2%</span>
+                总体增长
+                <span>25634人</span>
+                <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+                <span>2.4%</span>
+            </div>
+        </div>
+        <!-- 流动人口社保、公积金缴纳情况 -->
+        <div id="op2" style="width: 340px;height:180px;"></div>
 
-    <!-- 流动人口子女入学率 -->
-    <div id="op7" style="width: 400px;height:300px;"></div>
+        <!-- 流动人口职业收入情况 -->
+        <div id="op3" style="width: 340px;height:100px;"></div>
 
-    <!-- 流动人口来源地分布 -->
-    <div id="op8" style="width: 400px;height:300px;"></div> 
+        <!-- 流动人口犯罪率及犯罪类型 -->
+        <div id="op4" style="width: 340px;height:174px;"></div>
 
-    <!-- 流动人口数量及性别年变化 -->
-    <div id="op9" style="width: 400px;height:300px;"></div>
+        <!-- 流动人口民族构成 -->
+        <!-- <div id="op5" style="width: 400px;height:300px;"></div> -->
 
-    <!-- 流动人口本市居住地分布 -->
-    <div id="map" style="width: 800px;height:600px;"></div>
-    
+        <!-- 流动人口民族宗教 -->
+        <!-- <div id="op6" style="width: 400px;height:300px;"></div> -->
+
+        <!-- 流动人口子女入学率 -->
+        <!-- <div id="op7" style="width: 400px;height:300px;"></div> -->
+
+        <!-- 流动人口来源地分布 -->
+        <!-- <div id="op8" style="width: 400px;height:300px;"></div> -->
+
+        <!-- 流动人口数量及性别年变化 -->
+        <!-- <div id="op9" style="width: 400px;height:300px;"></div> -->
+
+        <!-- 流动人口本市居住地分布 -->
+        <!-- <div id="map" style="width: 800px;height:600px;"></div> -->
+    </div>
 
     <script src="流动人口社保、公积金缴纳情况.js"></script>
     <script src="流动人口职业收入情况.js"></script>

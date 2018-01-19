@@ -10,13 +10,13 @@ var option2 = {
     legend: {
         data: ['社保', '公积金'],
         right: '6%',
-        top: '10%',
+        top: '18%',
     },
     grid: {
-        left: '10%',
-        top: '10%',
-        height: '75%',
-        width: '85%',
+        left: '14%',
+        bottom: '12%',
+        height: '72%',
+        width: '80%',
     },
     xAxis: {
         type: 'category',
