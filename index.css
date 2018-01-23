@@ -26,7 +26,7 @@ body {
     position: absolute;
     left: 3%;
     display: block;
-    color: #e69d87;
+    color:rgb(235, 195, 187);
     letter-spacing: 3px;
     font-size: 28px;
 }
@@ -51,7 +51,7 @@ body {
     top: 46px;
     height: 60px;
     width: 340px;
-    color: #e69d87;
+    color:rgb(235, 195, 187);
 }
 
 #op1 span {
@@ -64,7 +64,7 @@ body {
 }
 
 #op1-main span {
-    border: 1px solid #dd6b66;
+    border: 1px solid #e6362c;
     font-size: 37px;
     padding: 0 8px 0 8px;
     margin: 3px 0 2px 3px;
@@ -88,6 +88,7 @@ body {
 
 #op2 {
     top: 146px;
+    left: 14px;
     border: 1px solid rgb(36, 35, 35);
 }
 
@@ -109,6 +110,14 @@ body {
     top: 53px;
     padding: 9px;
     border: 1px solid rgb(36, 35, 35);
+}
+
+#map h3 {
+    width: 100%;
+    height: 3%;
+    position: absolute;
+    z-index: 55;
+    top:3%;
 }
 
 #op5 {
