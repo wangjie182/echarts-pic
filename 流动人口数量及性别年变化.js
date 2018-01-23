@@ -15,8 +15,8 @@ var option9 = {
         show: true,
         // left: '2%',
         right: '5%',
-        bottom: '7%',
-        height: '77%',
+        bottom: '14%',
+        height: '67%',
         width: '77%'
         // containLabel: true,
     },
@@ -28,7 +28,7 @@ var option9 = {
     legend: {
         itemWidth: 25,
         right: 6,
-        top: '7%',
+        top: '9%',
         data: ['女', '男', '流动人口总量', '常驻人口总量']
     },
     series: [

@@ -12,8 +12,8 @@ var option4 = {
     },
     grid: {
         left: '7%',
-        top: '12%',
-        height: '66%',
+        top: '17%',
+        height: '61%',
         width: '90%',
     },
     xAxis: {

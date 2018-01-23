@@ -177,12 +177,12 @@ myChart.setOption({
         min: 10000,
         max: 50000,
         calculable: true,
-        inRange: {
-            color: ['#50a3ba', '#eac736', '#d94e5d']
-        },
-        textStyle: {
-            color: '#fff'
-        }
+        // inRange: {
+        //     color: ['#50a3ba', '#eac736', '#d94e5d']
+        // },
+        // textStyle: {
+        //     color: '#fff'
+        // }
     },
 
     series: [

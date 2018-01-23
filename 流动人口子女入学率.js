@@ -6,9 +6,15 @@ option7 = {
     tooltip: {
         trigger: 'axis'
     },
+    grid: {
+        right: '6%',
+        bottom: '14%',
+        height: '67%',
+        width: '77%'
+    },
     legend: {
         data: ['入学率'],
-        right: '6%',
+        right: '11%',
         top: '4%',
     },
     calculable: true,

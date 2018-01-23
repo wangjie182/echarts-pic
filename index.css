@@ -102,3 +102,43 @@ body {
     top: 460px;
     border: 1px solid rgb(36, 35, 35);
 }
+
+#map {
+    position: fixed;
+    left: 371px;
+    top: 53px;
+    padding: 9px;
+    border: 1px solid rgb(36, 35, 35);
+}
+
+#op5 {
+    position: fixed;
+    left: 371px;
+    bottom: 8px;
+    border: 1px solid rgb(36, 35, 35);
+}
+#op6 {
+    position: fixed;
+    left: 703px;
+    bottom: 8px;
+    border: 1px solid rgb(36, 35, 35);
+}
+
+#op7 {
+    /* position: fixed; */
+    left: 1040px;
+    top: 266px;
+    border: 1px solid rgb(36, 35, 35);
+}
+#op8 {
+    position: fixed;
+    left: 1040px;
+    top: 54px;
+    border: 1px solid rgb(36, 35, 35);
+}
+
+#op9 {
+    left: 1040px;
+    bottom: 112px;
+    border: 1px solid rgb(36, 35, 35);
+}
